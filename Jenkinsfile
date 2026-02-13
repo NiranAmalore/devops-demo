@@ -11,12 +11,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/NiranAmalore/devops-demo.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean package'
@@ -59,4 +53,3 @@ pipeline {
         }
     }
 }
-
